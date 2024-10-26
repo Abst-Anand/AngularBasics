@@ -1,10 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { NgxPaginationModule } from 'ngx-pagination';
+
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsFeatureModule } from './products-feature/products-feature.module'
+
+import { ProductComp } from './products/product.component';
 
 @NgModule({
   declarations: [
@@ -14,9 +18,10 @@ import { ProductsFeatureModule } from './products-feature/products-feature.modul
   imports: [
     BrowserModule,
     AppRoutingModule,
-    ProductsFeatureModule
+    ProductsFeatureModule,
+    NgxPaginationModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [ProductComp]
 })
 export class AppModule { }

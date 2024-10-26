@@ -1,0 +1,13 @@
+<!-- <h2>Product List from html template file</h2>
+<div *ngIf="showThisDiv">Product 1</div>
+ <div>Random Numbers ({{n}}): {{ rNums }}</div> 
+<li *ngFor="let dept of departments">{{ dept }}</li> 
+-->
+
+<div>
+    <h3>Pagination {{ n }} random numbers</h3>
+    <div id="pages" *ngFor="let x of rNums | paginate: {itemsPerPage: itemsToDisplay , currentPage:page}">
+        {{ x }}
+    </div>
+    <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+</div>

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
+import { NgxPaginationModule } from 'ngx-pagination';
 
 
 
@@ -7,7 +8,8 @@ import { CommonModule } from '@angular/common';
   declarations: [],
   imports: [],
   exports:[
-    CommonModule
+    CommonModule,
+    NgxPaginationModule
   ]
 })
 export class SharedModule { }
