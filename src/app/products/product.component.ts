@@ -1,4 +1,4 @@
-import { Component } from "@angular/core";
+import { Component, Input, Output, EventEmitter } from "@angular/core";
 
 declare const genRandomNumbers:any;
 declare const getN:any;
@@ -17,7 +17,7 @@ declare const getN:any;
 export class ProductComp{
     showThisDiv=true
 
-    rNums = <[]>genRandomNumbers();
+    rNums = <[]>genRandomNumbers().sort((a:number,b:number)=>a-b).filter((x :number )=> x < 10000);
 
     n = <number>getN()
 
@@ -30,4 +30,13 @@ export class ProductComp{
     pageChanged(event:any) {
         this.page = event
     }
+
+    @Input() p_title:String = 'NA' ;
+
+    @Output() c_newProductEvent = new EventEmitter<string>();
+
+    addNewProduct(value:string){
+        this.c_newProductEvent.emit(value);
+    }
+
 }

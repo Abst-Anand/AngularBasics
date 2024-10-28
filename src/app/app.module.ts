@@ -9,11 +9,13 @@ import { HomeComponent } from './home/home.component';
 import { ProductsFeatureModule } from './products-feature/products-feature.module'
 
 import { ProductComp } from './products/product.component';
+// import { ClassifyPipe } from './classify.pipe';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
+    
   ],
   imports: [
     BrowserModule,
@@ -22,6 +24,6 @@ import { ProductComp } from './products/product.component';
     NgxPaginationModule
   ],
   providers: [],
-  bootstrap: [ProductComp]
+  bootstrap: [AppComponent]
 })
 export class AppModule { }

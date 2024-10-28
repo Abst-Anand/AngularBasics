@@ -4,10 +4,21 @@
 <li *ngFor="let dept of departments">{{ dept }}</li> 
 -->
 
+<!-- Pagination 
 <div>
     <h3>Pagination {{ n }} random numbers</h3>
-    <div id="pages" *ngFor="let x of rNums | paginate: {itemsPerPage: itemsToDisplay , currentPage:page}">
-        {{ x }}
+    <div id="pages" *ngFor="let x of rNums | paginate: {itemsPerPage: itemsToDisplay , currentPage:page}; let i = index">
+        {{ i+1 + ".  "}}{{ x | classify}}
     </div>
     <pagination-controls (pageChange)="pageChanged($event)"></pagination-controls>
+</div> -->
+
+<div>
+    Product Page <br>
+    title = {{p_title}}
+
 </div>
+
+<label>Add a new Product: 
+     <input #newProduct> </label>
+<button (click)="addNewProduct(newProduct.value)">Submit</button>
