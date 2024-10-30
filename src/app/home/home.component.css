@@ -1,0 +1,14 @@
+form{
+    display: grid;
+    width: 450px;
+}
+
+input{
+    padding: 10px;
+    
+}
+
+button{
+    padding: 10px;
+    width: 100px;
+}

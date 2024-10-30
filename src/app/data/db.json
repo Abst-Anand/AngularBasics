@@ -1,0 +1,10 @@
+{
+  "customers": [
+    {
+      "id": "ff2a",
+      "customerName": "hello",
+      "email": "world",
+      "password": "1234"
+    }
+  ]
+}
