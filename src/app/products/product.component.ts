@@ -1,4 +1,5 @@
-import { Component, Input, Output, EventEmitter } from "@angular/core";
+import { Component, Input, Output, EventEmitter, OnInit } from "@angular/core";
+import { ActivatedRoute } from "@angular/router";
 
 declare const genRandomNumbers:any;
 declare const getN:any;
@@ -14,8 +15,10 @@ declare const getN:any;
     styleUrls : ['./product.component.css']
 })
 
-export class ProductComp{
+export class ProductComp implements OnInit{
     showThisDiv=true
+
+    routeVariable:string = ''
 
     rNums = <[]>genRandomNumbers().sort((a:number,b:number)=>a-b).filter((x :number )=> x < 10000);
 
@@ -37,6 +40,14 @@ export class ProductComp{
 
     addNewProduct(value:string){
         this.c_newProductEvent.emit(value);
+    }
+
+    constructor(private route:ActivatedRoute){
+        
+    }
+
+    ngOnInit(): void {
+        this.route.params.subscribe(pid => this.routeVariable = pid['id'])
     }
 
 }

@@ -12,12 +12,14 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { ProductsFeatureModule } from './products-feature/products-feature.module'
 import { BikeComponent } from './bikes/bike.component';
+import { AlertComponent } from './alert/alert.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     HomeComponent,
-    BikeComponent
+    BikeComponent,
+    AlertComponent
   
     
   ],
